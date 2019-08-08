@@ -23,12 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="499ff42f-d1d3-4b38-9a17-8eda0367c9f3">
-        <schema name="jdbccourse" object-types="function, view, procedure, table" />
-        <schema name="mysql" object-types="function, view, procedure, table" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="499ff42f-d1d3-4b38-9a17-8eda0367c9f3">
@@ -70,7 +65,7 @@
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="8.0" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
