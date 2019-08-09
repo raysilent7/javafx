@@ -20,7 +20,7 @@ public class DepartmentService {
             dao.insert(obj);
         }
         else {
-            dao.insert(obj);
+            dao.update(obj);
         }
     }
 }
