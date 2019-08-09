@@ -2,6 +2,7 @@ package gui;
 
 import db.DbException;
 import entities.Department;
+import exceptions.ValidationException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Constraints;
@@ -16,9 +17,7 @@ import javafx.scene.control.TextField;
 import services.DepartmentService;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class DepartmentFormController implements Initializable {
 
@@ -60,6 +59,9 @@ public class DepartmentFormController implements Initializable {
         catch (DbException e) {
             Alerts.showAlert("Error saving object", null, e.getMessage(), Alert.AlertType.ERROR);
         }
+        catch (ValidationException e) {
+            setErrorMessages(e.getErrors());
+        }
     }
 
     @FXML
@@ -91,8 +93,20 @@ public class DepartmentFormController implements Initializable {
 
     private Department getFormData() {
         Department obj = new Department();
+
+        ValidationException exception = new ValidationException("Validation error");
+
         obj.setId(Utils.tryParseToInt(txtId.getText()));
+
+        if (txtName.getText() == null || txtName.getText().trim().equals("")) {
+            exception.addError("Name", "Field can't be empty");
+        }
+
         obj.setName(txtName.getText());
+
+        if (exception.getErrors().size() > 0) {
+            throw exception;
+        }
 
         return obj;
     }
@@ -100,6 +114,14 @@ public class DepartmentFormController implements Initializable {
     private void notifyDataChangeListeners() {
         for (DataChangeListener listener : dataChangeListeners) {
             listener.onDataChanged();
+        }
+    }
+
+    private void setErrorMessages (Map<String, String> errors) {
+        Set<String> fields = errors.keySet();
+
+        if (fields.contains("Name")) {
+            labelErrorName.setText(errors.get("Name"));
         }
     }
 }
