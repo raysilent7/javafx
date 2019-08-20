@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="SellerTableView updated">
-      <change afterPath="$PROJECT_DIR$/src/gui/SellerForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/SellerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SellerListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SellerListController.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="SellerForm updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/impl/SellerDaoJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/impl/SellerDaoJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SellerForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SellerForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SellerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SellerFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/util/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/util/Utils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +246,7 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1566307547511" duration="3348000" />
+      <workItem from="1566307547511" duration="5621000" />
     </task>
     <task id="LOCAL-00001" summary="starting project">
       <created>1565204523154</created>
@@ -344,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566310704232</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="SellerForm updated">
+      <created>1566311100530</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1566311100530</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,6 +389,7 @@
     <MESSAGE value="Implementing Remove department" />
     <MESSAGE value="Creating SellerList and services" />
     <MESSAGE value="SellerTableView updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="SellerTableView updated" />
+    <MESSAGE value="SellerForm updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="SellerForm updated" />
   </component>
 </project>
