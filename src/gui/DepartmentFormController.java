@@ -79,7 +79,7 @@ public class DepartmentFormController implements Initializable {
             throw new IllegalStateException("Entity was null");
         }
         txtId.setText(String.valueOf(entity.getId()));
-        txtId.setText(entity.getName());
+        txtName.setText(entity.getName());
     }
 
     public void subscribeDataChangeListener (DataChangeListener listener) {

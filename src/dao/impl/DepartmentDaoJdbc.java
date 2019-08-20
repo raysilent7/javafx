@@ -3,13 +3,12 @@ package dao.impl;
 import dao.DepartmentDao;
 import db.DB;
 import db.DbException;
+import db.DbIntegrityException;
 import entities.Department;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class DepartmentDaoJdbc implements DepartmentDao {
 
@@ -18,7 +17,6 @@ public class DepartmentDaoJdbc implements DepartmentDao {
     public DepartmentDaoJdbc (Connection conn) {
         this.conn = conn;
     }
-
 
     @Override
     public void insert(Department dep) {
@@ -75,7 +73,7 @@ public class DepartmentDaoJdbc implements DepartmentDao {
             st.executeUpdate();
         }
         catch (SQLException e) {
-            throw new DbException(e.getMessage());
+            throw new DbIntegrityException(e.getMessage());
         }
         finally {
             DB.closeStatement(st);
